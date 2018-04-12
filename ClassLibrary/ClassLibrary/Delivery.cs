@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab3
+namespace ClassLibrary
 {
-    class Delivery
+    public class Delivery : IbooksReader
     {
         public int ID_Delivery
         { get; set; }
@@ -33,6 +33,11 @@ namespace lab3
             EmployeeDelivery.Info();
             Reader1.Info();
             Exemplar1.Info();
+        }
+
+        void IbooksReader.Count(string count)
+        {
+            Console.WriteLine("Колличество книг на руках читателя: {0}", count);
         }
     }
 }

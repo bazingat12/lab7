@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab3
+namespace ClassLibrary
 {
-    class Employee
+    public class Employee : Home 
     {
         public int ID_Employee
         { get; set; }
@@ -23,7 +23,7 @@ namespace lab3
         public byte Experience
         { get; set; }
 
-        public Employee (int ID_Employee, Position EmployeePosition, string Surname, string Name, string Patronymic, int INN, byte Experience)
+        public Employee (int ID_Employee, Position EmployeePosition, string Surname, string Name, string Patronymic, int INN, byte Experience, string City, string Street, string home1): base (City, Street, home1)
         {
             this.ID_Employee = ID_Employee;
             this.EmployeePosition = EmployeePosition;
@@ -36,9 +36,9 @@ namespace lab3
         public virtual void Info()
         {
             Console.WriteLine("Сотрудник: ");
-            Console.WriteLine("    Код сотрудника: {0}\n       Фамилия: {1}\n    Имя: {2}\n    Отчество: "
-                + "{3}\n    ИНН: {4}\n    Стаж работы: {5}",
-                ID_Employee, Surname, Name, Patronymic, INN, Experience);
+            Console.WriteLine("    Код сотрудника: {0}\n    Фамилия: {1}\n    Имя: {2}\n    Отчество: "
+                + "{3}\n    ИНН: {4}\n    Стаж работы: {5}\n    Город: {6}\n    Улица: {7}\n    Дом: {8}\n",
+                ID_Employee, Surname, Name, Patronymic, INN, Experience, city, street, home);
                EmployeePosition.Info();
         }
     }

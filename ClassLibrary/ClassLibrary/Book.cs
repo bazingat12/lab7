@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab3
+namespace ClassLibrary
 {
-    class Book
+    public class Book
     {
         public int ID_Book
         { get; set; }
@@ -28,7 +28,7 @@ namespace lab3
         public virtual void Info()
         {
             Console.WriteLine("Информация о книге: ");
-            Console.WriteLine("   Код книги: {0}\n    Автор: {1}\n    Название книги: {2} \n    Жанр: {3}\n",
+            Console.WriteLine("    Код книги: {0}\n    Автор: {1}\n    Название книги: {2} \n    Жанр: {3}\n",
                 ID_Book, Author, NameBook, Genre);
         }
     }

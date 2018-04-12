@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace lab3
+namespace ClassLibrary
 {
-    class Position
+    public class Position
     {
        public int ID_Position
         { get; set; }
