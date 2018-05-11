@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class Delivery : IbooksReader
+    public class Delivery
     {
         public int ID_Delivery
         { get; set; }
@@ -14,11 +14,11 @@ namespace ClassLibrary
         { get; set; }
         public Employee EmployeeDelivery
         { get; set; }
-        public Reader Reader1
+        public IReader Reader1
         { get; set; }
         public Exemplar Exemplar1
         { get; set; }
-        public Delivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, Reader Reader1, Exemplar Exemplar1)
+        public Delivery(int ID_Delivery, DateTime Data, Employee EmployeeDelivery, IReader Reader1, Exemplar Exemplar1)
         {
             this.ID_Delivery = ID_Delivery;
             this.Data = Data;
@@ -33,11 +33,6 @@ namespace ClassLibrary
             EmployeeDelivery.Info();
             Reader1.Info();
             Exemplar1.Info();
-        }
-
-        void IbooksReader.Count(string count)
-        {
-            Console.WriteLine("Колличество книг на руках читателя: {0}", count);
         }
     }
 }
